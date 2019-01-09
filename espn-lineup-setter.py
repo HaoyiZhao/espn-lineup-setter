@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
-class LineupSetter:
-    
+import sys
+from selenium import webdriver
+import unittest
+
+class LineupSetter(unittest.TestCase):
+    def setUpDriver(self):
+		self.driver = webdriver.Chrome()
+		self.driver.get("http://www.espn.com/fantasy/basketball/")
 
 if __name__ == '__main__':
 	if len(sys.argv) > 1:
